@@ -2,7 +2,7 @@
 // Prendere due parole dall'utente e dirgli quali delle due è più lunga.
 // Continuare fintanto che l'utente desidera
 
-using static csharp_snacks.Input;
+using static Utilities.Input;
 
 namespace csharp_snacks {
     public class Snack3 {

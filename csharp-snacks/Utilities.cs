@@ -1,4 +1,4 @@
-﻿namespace csharp_snacks {
+﻿namespace Utilities {
     public static class Input {
         public static string? InputConMessaggio(string messaggio) {
             Console.WriteLine(messaggio);
@@ -21,7 +21,7 @@
             do {
                 Console.WriteLine(messaggio);
                 Console.WriteLine(@"Inserisci ""y"" o ""n"" per scegliere: ");
-                conferma = Console.ReadLine();
+                conferma = Console.ReadLine()?.ToLower();
             } while (!(conferma == "y" || conferma == "n"));
             return conferma == "y";
         }

@@ -7,10 +7,25 @@
  * richiedete l’opzione corretta [sanificazione dell’input]).
 */
 
+using static Utilities.Input;
+
 namespace csharp_snacks {
     public class Snack4 {
         public static void MainSnack() {
-            
+            Random rng = new();
+            int randomInt = rng.Next();
+
+            bool rispostaGiusta = randomInt % 3 == 0;
+            bool rispostaUtente;
+
+            rispostaUtente = ChiediConferma("Secondo te il numero casuale del PC è multiplo di 3?");
+
+            if (rispostaUtente == rispostaGiusta) {
+                Console.WriteLine($"Risposta esatta! Il numero generato era {randomInt}");
+            }
+            else {
+                Console.WriteLine($"Risposta sbagliata... Il numero generato era {randomInt}");
+            }
         }
     }
 }
